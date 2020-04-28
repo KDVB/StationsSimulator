@@ -5,93 +5,98 @@ using UnityEngine.UI;
 
 public class Global : MonoBehaviour
 {
+    
+    public static bool isLesson = false;    //перевіряє чи користувач знаходиться у меню, чи проходить урок
+    public static int currentTask = 0;  //індекс поточного завдання з уроку, яке потрібно виконати
 
-    public static bool isLesson = false;
-    public static int currentTask = 0;
+    public static string path = @"\Documentation\Harris RF-7800";
+    public static string testPath = @"\Documentation\Tests";
 
-    public static string path = @"C:\Users\KDVB\Desktop\Harris RF-7800";
-    public static string testPath = @"C:\Users\KDVB\Desktop\Tests";
+    public static string currentOption = "";    //зміна для перевірки вибраного елементу стрілками вверх та вниз (використовується для зміни відображення підсказок)
 
-    public static string currentOption = "";
+    public static Dictionary<string, string> keyValues = new Dictionary<string, string>();  //словник змінних та відповідних їм написам, які будуть відображатись при виконанні завдання
+    public static Dictionary<string, string> currentTasks = new Dictionary<string, string>();   //словник для зміних та значеннями, які потрібно досягти для виконання уроку
 
-    public static Dictionary<string, string> keyValues = new Dictionary<string, string>();
-    public static Dictionary<string, string> currentTasks = new Dictionary<string, string>();
+    public static GameObject taskArrow;     //ігровий обьект стрілки, яка відображає поточне завдання на виконання
+    public static float arrowPosition;  //позиція стрілки
+    public static bool isCouplerIn = false;     //перевірка підключення антени
 
-    public static GameObject taskArrow;
-    public static float arrowPosition;
-    public static bool isCouplerIn = false;
+    public static int currentStation = 0;   //індекс для переключення станцій
+    public GameObject[] stations;   //масив колайдерів розташованих навколо моделей станцій
+    public GameObject[] stationsModel;  //масив моделей станцій
 
-    public static int currentStation = 0;
-    public GameObject[] stations;
-    public GameObject[] stationsModel;
+    public static string currentMode = "";  //поточний режим роботи Harris 7800
+    public static bool modeSwitch = false;  //включення станції
+    public static bool isLoad = false;  //завантаження станції
+    public static bool inSettingMenu = false;   //натиснення кнопки 7 та перехід у меню налаштувань
+    public static bool isTurn = false;  
+    public static bool exitAcc = false;   //вихід з меню Acc-Ext  
 
-    public static string currentMode = "";
-    public static bool modeSwitch = false;
-    public static bool isLoad = false;
-    public static bool inSettingMenu = false;
-    public static bool isTurn = false;
-    public static bool exitAcc = false;
+    public static bool isTod = false;   //перехід у меню GPS-TOD
+    public static bool isRadio = false; //перехід у меню Radio
+    public static bool isScan = false;  //перехід у меню Scan
+    public static bool isARP = false;   //перехід у меню ARP
+    public static bool isAcc = false;   //перехід у меню ACC-EXT
+    public static bool arpView = false; //перехід у меню Arp View
+    public static bool arpConfig = false;   //перехід у меню Arp Config
+    public static bool isTest = false;  //перехід у меню Test
+    public static bool isBit = false;   //перехід у меню BIT Test
 
-    public static bool isTod = false;
-    public static bool isRadio = false;
-    public static bool isScan = false;
-    public static bool isARP = false;
-    public static bool isAcc = false;
-    public static bool arpView = false;
-    public static bool arpConfig = false;
-    public static bool isTest = false;
-    public static bool isBit = false;
+    public static string txLevel = "";  //Значення Radio TX Level
+    public static string squelchLevel = ""; //Значення Radio Squelch Level
+    public static string fm = "";           //Значення Radio FM
+    public static string internalCoupler = "";  //Значення Radio Internal
+    public static string radioSilence = ""; //Значення Radio silence
+    public static string bfo = "";  //Значення Radio BFO
+    public static string rxNoise = "";  //Значення Radio RX Noise
+    public static string radioLock = "";    //Значення Radio Lock
 
-    public static string txLevel = "";
-    public static string squelchLevel = "";
-    public static string fm = "";
-    public static string internalCoupler = "";
-    public static string radioSilence = "";
-    public static string bfo = "";
-    public static string rxNoise = "";
-    public static string radioLock = "";
+    public static List<TextMeshProUGUI> tasks = new List<TextMeshProUGUI>(); //масив текстових полів для відображення на інтерфейсі завдань поточного уроку
 
-    public static List<TextMeshProUGUI> tasks = new List<TextMeshProUGUI>(); 
+    public static float timeLoad = 0f;  //для симуляції завантаження Harris 7800
 
-    public static float timeLoad = 0f;
+    public GameObject[] loadMenu = new GameObject[4];   //Вікна для завантаження станції
 
-    public GameObject[] loadMenu = new GameObject[4];
+    public GameObject[] settingMenu = new GameObject[2];    //вікна для меню кнопки 7
+    public TextMeshProUGUI[] menuItems = new TextMeshProUGUI[7];    //текстові поля вікон кнопки номер 7
+    public Image[] menuImages = new Image[7];   //картинки вікон кнопки номер 7
 
-    public GameObject[] settingMenu = new GameObject[2];
-    public TextMeshProUGUI[] menuItems = new TextMeshProUGUI[7];
-    public Image[] menuImages = new Image[7];
+    public GameObject Gps;  //вікно для відображення меню GPS-TOD
+    public GameObject[] radioSettings = new GameObject[9];  //вікно для відображення меню Radio
+    public GameObject scanSetting;  //вікно для відображення меню Scan
+    public GameObject arpSetting;   //вікно для відображення меню ARP
+    public Image[] arpMenuImage = new Image[2]; //картинки вікон меню ARP
+    public TextMeshProUGUI[] arpMenuText = new TextMeshProUGUI[2];  //текстові поля вікон меню ARP
+    public GameObject[] arpViewSettings = new GameObject[4];   //вікно для відображення меню ARP View 
+    public GameObject arpConfigSetting;     //вікно для відображення меню ARP config
+    public GameObject[] extSetting = new GameObject[4]; //вікно для відображення меню Acc-Ext
 
-    public GameObject Gps;
-    public GameObject[] radioSettings = new GameObject[9];
-    public GameObject scanSetting;
-    public GameObject arpSetting;
-    public Image[] arpMenuImage = new Image[2];
-    public TextMeshProUGUI[] arpMenuText = new TextMeshProUGUI[2];
-    public GameObject[] arpViewSettings = new GameObject[4];
-    public GameObject arpConfigSetting;
-    public GameObject[] extSetting = new GameObject[4];
+    public GameObject[] arpConfigImage = new GameObject[2];  //картинки вікон меню ARP config
 
-    public GameObject[] arpConfigImage = new GameObject[2];
+    public GameObject[] firstRadioImage = new GameObject[3];    //картинки для вибору значення поточної властивості у меню Radio
+    public GameObject[] secondRadioImage = new GameObject[3];   //картинки для вибору значення поточної властивості у меню Radio
+    public GameObject[] thirdRadioImage = new GameObject[2];    //картинки для вибору значення поточної властивості у меню Radio
+    public GameObject[] fourthRadioImage = new GameObject[2];   //картинки для вибору значення поточної властивості у меню Radio
+    public GameObject[] fifthRadioImage = new GameObject[2];    //картинки для вибору значення поточної властивості у меню Radio
+    public GameObject[] sithRadioImage = new GameObject[3];     //картинки для вибору значення поточної властивості у меню Radio
+    public GameObject[] seventhRadioImage = new GameObject[2];  //картинки для вибору значення поточної властивості у меню Radio
+    public GameObject[] eigthRadioImage = new GameObject[2];    //картинки для вибору значення поточної властивості у меню Radio
 
-    public GameObject[] firstRadioImage = new GameObject[3];
-    public GameObject[] secondRadioImage = new GameObject[3];
-    public GameObject[] thirdRadioImage = new GameObject[2];
-    public GameObject[] fourthRadioImage = new GameObject[2];
-    public GameObject[] fifthRadioImage = new GameObject[2];
-    public GameObject[] sithRadioImage = new GameObject[3];
-    public GameObject[] seventhRadioImage = new GameObject[2];
-    public GameObject[] eigthRadioImage = new GameObject[2];
+    public GameObject[] scanImage = new GameObject[2];  //вікно для відображення меню Scan
 
-    public GameObject[] scanImage = new GameObject[2];
-
-    public GameObject testSetting;
-    public Image[] testSettingMenuImage = new Image[6];
-    public TextMeshProUGUI[] testSettingMenuText = new TextMeshProUGUI[6];
+    public GameObject testSetting;  //вікно для відображення меню Test
+    public Image[] testSettingMenuImage = new Image[6]; //картинки вікон меню Test
+    public TextMeshProUGUI[] testSettingMenuText = new TextMeshProUGUI[6];  //текстові поля вікон меню Test
 
     public GameObject bitTest;
     public GameObject[] bitTestMode = new GameObject[7];
     public GameObject[] testInProgress = new GameObject[3];
 
+    public GameObject[] pgmMenu = new GameObject[2];
+    public TextMeshProUGUI[] pgmMenuItems = new TextMeshProUGUI[7];
+    public Image[] pgmMenuImages = new Image[7];
+
+    //Індекси для відповідних пунктів меню
     public static int currentAccWindow = 0;
     public static int currentTestBitItem = 0;
     public static int currentTestItem = 0;
@@ -102,6 +107,7 @@ public class Global : MonoBehaviour
     public static int currentRadioItem = 0;
     public static int currentMenuItem = 0;
 
+    //кольори для фонів та текстів
     public Color32 greenLight = new Color32(136, 196, 0, 255);
     public Color32 blackLight = new Color32(40, 40, 40, 255);
     public static Color32 currentTaskColor = new Color32(158, 231, 74, 255);

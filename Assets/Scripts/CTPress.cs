@@ -33,7 +33,7 @@ public class CTPress : MonoBehaviour
                 GameObject.Find("GameGlobalVariables").GetComponent<Global>().DisableLoadMenu();
                 GameObject.Find("GameGlobalVariables").GetComponent<Global>().loadMenu[2].SetActive(true);
             }
-            else if ((Time.time - Global.timeLoad) < 7f)
+            else if ((Time.time - Global.timeLoad) < 6f)
             {
                 GameObject.Find("GameGlobalVariables").GetComponent<Global>().DisableLoadMenu();
                 GameObject.Find("GameGlobalVariables").GetComponent<Global>().loadMenu[3].SetActive(true);

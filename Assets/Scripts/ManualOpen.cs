@@ -31,12 +31,12 @@ public class ManualOpen : MonoBehaviour
             if(fileNames[i].Contains(button.GetComponentInChildren<TextMeshProUGUI>().text))
             {
                 filePath = fileNames[i];
+                break;
             }
         }
 
-        Uri uri = new System.Uri(filePath);
+        Uri uri = new System.Uri(System.Environment.CurrentDirectory + filePath);
         string converted = uri.AbsoluteUri;
-
         Process.Start(@"C:\Users\KDVB\Desktop\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.exe", converted);
     }
 

@@ -1,6 +1,0 @@
-isCouplerIn:true
-isTurn:true
-currentMode:pt
-inSettingMenu:true
-isAcc:true
-exitAcc:trueke

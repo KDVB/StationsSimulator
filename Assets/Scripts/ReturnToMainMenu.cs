@@ -23,6 +23,9 @@ public class ReturnToMainMenu : MonoBehaviour
         stationAnim.SetActive(true);
         hintbutton.SetActive(false);
 
+        HintShowing.isHint = false;
+        GameObject.Find("GameGlobalVariables").GetComponent<Global>().DisableLoadMenu();
+
         GameObject.Find("cabel").GetComponent<Animation>().Play("CableOut");
         Global.isCouplerIn = false;
         GameObject.Find("Glass").SetActive(false);

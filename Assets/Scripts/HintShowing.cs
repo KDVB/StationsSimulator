@@ -7,7 +7,7 @@ using System.Linq;
 
 public class HintShowing : MonoBehaviour
 {
-    public bool isHint = false;
+    public static bool isHint = false;
     public GameObject antenaImage;
     public GameObject[] horizontalButtons = new GameObject[2];
     public GameObject[] verticalButtons = new GameObject[2];
