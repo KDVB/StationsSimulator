@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BatteryConnect.cs" />
     <Compile Include="Assets\Scripts\Button0.cs" />
     <Compile Include="Assets\Scripts\Button1.cs" />
     <Compile Include="Assets\Scripts\Button2.cs" />

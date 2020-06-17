@@ -140,7 +140,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 1.25
+  m_padding: 0
   m_canvasRenderer: {fileID: 6496188114873111697}
   m_TextComponent: {fileID: 4307085419527888069}
   m_materialReferenceIndex: 1
@@ -171,7 +171,7 @@ RectTransform:
   m_GameObject: {fileID: 8589219116577284017}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 2.5087743, y: 1.1062942, z: 2.5087743}
+  m_LocalScale: {x: 2.5087743, y: 1.7132703, z: 2.5087743}
   m_Children:
   - {fileID: 7484412798203092611}
   - {fileID: 6156877591834669014}
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: fasfsaf
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ae87401a643dea4b98bb6e0e3d5cf48, type: 2}
   m_sharedMaterial: {fileID: 5931518125280208743, guid: 4ae87401a643dea4b98bb6e0e3d5cf48,
@@ -276,16 +276,16 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -347.48184, w: -60.22273}
+  m_margin: {x: 0, y: 0, z: -516.6947, w: -501.42093}
   m_textInfo:
     textComponent: {fileID: 4307085419527888069}
-    characterCount: 0
+    characterCount: 7
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0

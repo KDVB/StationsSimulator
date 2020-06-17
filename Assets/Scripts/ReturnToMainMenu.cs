@@ -12,9 +12,12 @@ public class ReturnToMainMenu : MonoBehaviour
     public GameObject stationAnim;
     public GameObject finishText;
     public GameObject hintbutton;
+    public GameObject stationModel;
 
     public void ReturnToMain()
     {
+        stationModel.transform.position = new Vector3(0, 47, 31);
+
         finishText.SetActive(false);
         mainButton.SetActive(false);
         nextLessonButton.SetActive(false);

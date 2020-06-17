@@ -24,7 +24,6 @@ public class CreateManualList : MonoBehaviour
 
     public void CreateList()
     {
-
         string[] fileNames = Directory.GetFiles(Global.path);
         for (int i = 0; i < fileNames.Length; i++)
         {

@@ -23,6 +23,52 @@ public class Button8 : MonoBehaviour
         {
             gameObject.GetComponent<AudioSource>().Play(0);
             gameObject.GetComponent<Animation>().Play("Button8Press");
+
+            if (Global.isTimeInterval)
+            {
+                GameObject.Find("GameGlobalVariables").GetComponent<Global>().ChangeNumber("8");
+            }
+            else if (Global.isGPSARPIpAddress)
+            {
+                GameObject.Find("GameGlobalVariables").GetComponent<Global>().ChangeNumber("8");
+            }
+            else if (Global.isPgmConfigNetworkInterfaceEthernetAddressIP)
+            {
+                GameObject.Find("GameGlobalVariables").GetComponent<Global>().ChangeNumber("8");
+            }
+            else if (Global.isPgmConfigNetworkInterfacePPPAddressIP)
+            {
+                GameObject.Find("GameGlobalVariables").GetComponent<Global>().ChangeNumber("8");
+            }
+            else if (Global.isPgmConfigNetworkInterfacePPPAddressSubnet)
+            {
+                GameObject.Find("GameGlobalVariables").GetComponent<Global>().ChangeNumber("8");
+            }
+            else if (Global.isPgmConfigNetworkInterfacePPPAddressGetaway)
+            {
+                GameObject.Find("GameGlobalVariables").GetComponent<Global>().ChangeNumber("8");
+            }
+            else if (Global.isPgmConfigNetworkInterfaceWirelessAddressIP)
+            {
+                GameObject.Find("GameGlobalVariables").GetComponent<Global>().ChangeNumber("8");
+            }
+            else if (Global.isPgmConfigNetworkInterfaceWirelessAddressSubnet)
+            {
+                GameObject.Find("GameGlobalVariables").GetComponent<Global>().ChangeNumber("8");
+            }
+            else if (Global.isPgmConfigNetworkProtocolSNMPTrapAddress)
+            {
+                GameObject.Find("GameGlobalVariables").GetComponent<Global>().ChangeNumber("9");
+            }
+            else if (Global.isLoad && !Global.isSevenPress)
+            {
+                GameObject.Find("GameGlobalVariables").GetComponent<Global>().DisableLoadMenu();
+                GameObject.Find("GameGlobalVariables").GetComponent<Global>().pgmMenu[0].SetActive(true);
+                Global.currentOption = "comsec";
+                Global.isPgm = true;
+                Global.isEightPress = true;
+            }
+
         }
     }
 }

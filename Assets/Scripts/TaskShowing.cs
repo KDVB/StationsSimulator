@@ -10,9 +10,9 @@ public class TaskShowing : MonoBehaviour
 {
     public Button button; 
     public GameObject prefab;
-    public GameObject arrowTask;
     public float position;
     public GameObject station;
+    public GameObject stationModel;
     public static bool defaultPosition = false;
     private RectTransform panel;
     public GameObject nextStationButton;
@@ -29,6 +29,7 @@ public class TaskShowing : MonoBehaviour
         nextStationButton = GameObject.Find("NextStation");
         prevStationButton = GameObject.Find("PrevStation");
         station = GameObject.Find("AnimHarris7800");
+        stationModel = GameObject.Find("Station");
         
     }
 
@@ -37,7 +38,8 @@ public class TaskShowing : MonoBehaviour
 
     void TaskShow()
     {
-        Global.arrowPosition = 475;
+        stationModel.transform.position = new Vector3(36,64,31);
+
         Global.isLesson = true;
         defaultPosition = true;
         station.SetActive(false);
@@ -45,9 +47,6 @@ public class TaskShowing : MonoBehaviour
         prevStationButton.SetActive(false);
         nextStationButton.SetActive(false);
 
-        GameObject arrow = (GameObject)Instantiate(arrowTask);
-        arrow.transform.SetParent(panel, false);
-        arrow.transform.localPosition = new Vector3(-960, Global.arrowPosition, 0);
 
         string filePath = "";
         string[] fileNames = Directory.GetFiles(Global.testPath);
@@ -71,11 +70,11 @@ public class TaskShowing : MonoBehaviour
                 goButton.GetComponentInChildren<TextMeshProUGUI>().text += " " + fileLines[i].Split(':')[1].ToUpper();
             }
             goButton.transform.SetParent(panel, false);
-            goButton.transform.localPosition = new Vector3(-590, position, 0);
+            goButton.transform.localPosition = new Vector3(-590, 0, 0);
+            int k = (goButton.GetComponentInChildren<TextMeshProUGUI>().text.Length / 40);
+            goButton.GetComponent<RectTransform>().sizeDelta = new Vector2(200,50 * (k+1) - 13 * k);
             Global.tasks.Add(goButton.GetComponent<TextMeshProUGUI>());
-            position -= 90;
-            Global.tasks[0].color = Global.currentTaskColor;
-            
+            Global.tasks[0].color = Global.currentTaskColor;  
         }
         
     }

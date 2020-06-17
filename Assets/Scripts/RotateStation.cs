@@ -15,8 +15,9 @@ public class RotateStation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        originRotation = station.transform.rotation;
         originScale = transform.localScale;
+        originRotation = station.transform.rotation;
+        
     }
 
     private void FixedUpdate()
