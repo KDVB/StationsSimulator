@@ -1,0 +1,145 @@
+<xml>
+  <widgetType>RolloverImage</widgetType>
+  <version>1.0</version>
+  <list>
+    <item>
+      <imagePath>assets/7800H/content/radio/RF-7800H-MP001_8-11_01771.jpg</imagePath>
+      <label>RF-7800H Controls</label>
+      <highlightMode>enabled</highlightMode>
+      <hotspotHighlightColor>13260</hotspotHighlightColor>
+      <hotspotHighlightAlpha>.3</hotspotHighlightAlpha>
+      <popupHighlightColor>14737632</popupHighlightColor>
+      <popupMode>popupBox</popupMode>
+      <hotspotMode>rollover</hotspotMode>
+      <stringFormatting>[name]: [text]</stringFormatting>
+      <imageBoxType type="boxes"/>
+      <imageBoxes>
+        <imageBox>
+          <x>149</x>
+          <y>158</y>
+          <width>94</width>
+          <height>93</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>J7 HF/VHF ANT</name>
+            <text>50-ohm antenna port for either a BNC (Bayonet Neill Concelman) connector or whip antenna.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>158</x>
+          <y>285</y>
+          <width>86</width>
+          <height>87</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>J3 DATA</name>
+            <text>For Data Terminal Equipment (DTE) data, or Point-to-Point (PPP) communcation, as well as auxiliary audio.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>226</x>
+          <y>252</y>
+          <width>53</width>
+          <height>49</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>J2 GPS</name>
+            <text>For removable Global Positioning System (GPS) antenna.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>518</x>
+          <y>239</y>
+          <width>47</width>
+          <height>43</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>J4 KDU</name>
+            <text>Connector for external Keypad Display Unit (KDU)</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>612</x>
+          <y>240</y>
+          <width>41</width>
+          <height>42</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>J5 USB</name>
+            <text>Connector for Universal Serial Bus (USB)</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>542</x>
+          <y>287</y>
+          <width>94</width>
+          <height>95</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>J1 AUDIO</name>
+            <text>Connector for an audio handset (uses a 6-pin connector).</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>70</x>
+          <y>234</y>
+          <width>50</width>
+          <height>45</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>Ground Post</name>
+            <text>Provides a grounding point for connecting an RF ground reference to the radio.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>280</x>
+          <y>145</y>
+          <width>236</width>
+          <height>100</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>LCD</name>
+            <text>Displays operational and programming screens.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>292</x>
+          <y>251</y>
+          <width>213</width>
+          <height>126</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>Keypad</name>
+            <text/>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>522</x>
+          <y>137</y>
+          <width>141</width>
+          <height>98</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>Function Switch</name>
+            <text/>
+          </contents>
+        </imageBox>
+      </imageBoxes>
+    </item>
+  </list>
+  <defaults>
+    <value name="type">
+      <item>boxes</item>
+      <item>circles</item>
+      <item>images</item>
+    </value>
+    <value name="highlightMode">
+      <item>enabled</item>
+      <item>disabled</item>
+    </value>
+    <value name="hotspotMode">
+      <item>rollover</item>
+      <item>click</item>
+    </value>
+  </defaults>
+</xml>

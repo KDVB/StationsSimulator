@@ -1,0 +1,76 @@
+<xml>
+  <widgetType>WaveDisplay</widgetType>
+  <version>1.0</version>
+  <content>
+    <title>HF Waves</title>
+    <description>The basic shape of a wave</description>
+  </content>
+  <list>
+    <item>
+      <horizontalRange min="20" max="-1" ticks="3" subTicks="10" measure="km" label="frequency" id="freq"/>
+      <verticalRange min="0" max="100" ticks="3" subTicks="10" measure="watts" label="amplitude" id="amp"/>
+      <display showHorizontalLabel="false" showHorizontalTick="false" showVerticalLabel="false" showVerticalTick="false" centerVerticalZero="true"/>
+      <waves>
+        <wave>
+          <id>noise1</id>
+          <label>HF Wave</label>
+          <color>0xff0000</color>
+          <isAnimated>true</isAnimated>
+          <startAmp>30.0000</startAmp>
+          <startFreq>200</startFreq>
+          <type>analog</type>
+          <speed>3</speed>
+          <isAdjustable>false</isAdjustable>
+        </wave>
+      </waves>
+      <controls/>
+      <actions>
+        <condition>
+          <target>wave1</target>
+          <conditionValue>amp</conditionValue>
+          <value>30</value>
+          <typeOfCondition><![CDATA[>]]></typeOfCondition>
+          <action>
+            <typeOfActionUpdate>text</typeOfActionUpdate>
+            <value><![CDATA[You broke the noise floor!]]></value>
+          </action>
+        </condition>
+        <condition>
+          <target>wave1</target>
+          <conditionValue>amp</conditionValue>
+          <value>30</value>
+          <typeOfCondition><![CDATA[<=]]></typeOfCondition>
+          <action>
+            <typeOfActionUpdate>text</typeOfActionUpdate>
+            <value><![CDATA[Use the amplitude slider to break the noise floor.]]></value>
+          </action>
+        </condition>
+      </actions>
+    </item>
+  </list>
+  <defaults>
+    <value name="typeOfActionUpdate">
+      <item>text</item>
+    </value>
+    <value name="typeOfCondition">
+      <item><![CDATA[<=]]></item>
+      <item><![CDATA[>=]]></item>
+      <item><![CDATA[<]]></item>
+      <item><![CDATA[>]]></item>
+      <item><![CDATA[==]]></item>
+      <item><![CDATA[!=]]></item>
+    </value>
+    <value name="controlValue">
+      <item>freq</item>
+      <item>amp</item>
+    </value>
+    <value name="type">
+      <item>analog</item>
+      <item>digital</item>
+    </value>
+    <value name="controlType">
+      <item>slider</item>
+    </value>
+    <value name="target" nodes="id"/>
+  </defaults>
+</xml>

@@ -1,0 +1,105 @@
+<xml>
+	<widgetType>ModulationDisplay</widgetType>
+	<version>1.0</version>
+	<content>
+		<title>Example of a Radiowave</title>
+		<description>Use the sliders to adjust the frequency and amplitude of the radio wave</description>
+	</content>
+	<list>
+		  <item>
+		  		<horizontalRange min="20" max="-1" ticks="3" subTicks="10" measure="km" label="frequency" id="freq"/>
+		  		<verticalRange min="0" max="100" ticks="3" subTicks="10" measure="watts" label="amplitude" id="amp"/>
+				<display showHorizontalLabel="true" showHorizontalTick="false" showVerticalLabel="true" showVerticalTick="true" centerVerticalZero="true"/>	
+				<waves>
+				<!-- type: (analog, digital) -->
+					<wave>
+							<id>wave1</id>
+							<label><![CDATA[Example RadioWave]]></label>
+							<color>0xff00ff</color>
+							<isAnimated>true</isAnimated>
+							<startAmp>30.0000</startAmp>
+							<startFreq>200</startFreq>
+							<type>analog</type>
+							<speed>3</speed>
+							<isAdjustable>true</isAdjustable>
+							<modulationRange>30</modulationRange>
+							<modulationStep>5</modulationStep>
+					  </wave>
+				</waves>
+			<controls>
+		  		<control>
+		  			<controlType>slider</controlType>
+					<target>wave1</target>
+		  			<controlValue>freq</controlValue>
+		  		</control>
+		  		<control>
+		  			<controlType>slider</controlType>
+					<target>wave1</target>
+		  			<controlValue>amp</controlValue>
+		  		</control>
+		  	</controls>
+		  	<actions>
+		  		<condition>
+		  			<target>wave1</target>
+		  			<conditionValue>amp</conditionValue>
+		  			<value>30</value>
+		  			<typeOfCondition><![CDATA[>]]></typeOfCondition>
+		  			<action>
+		  				<typeOfActionUpdate>text</typeOfActionUpdate>
+		  				<value><![CDATA[You broke the noise floor!]]></value>
+		  			</action>
+		  		</condition>
+				<condition>
+		  			<target>wave1</target>
+		  			<conditionValue>amp</conditionValue>
+		  			<value>30</value>
+		  			<typeOfCondition><![CDATA[<=]]></typeOfCondition>
+		  			<action>
+		  				<typeOfActionUpdate>text</typeOfActionUpdate>
+		  				<value><![CDATA[Use the amplitude slider to break the noise floor.]]></value>
+		  			</action>
+		  		</condition>
+		  	</actions>
+		  </item>
+	</list>
+	<defaults>
+    
+		<value name="typeOfActionUpdate">
+      
+			<item>text</item>
+
+		</value>
+		<value name="typeOfCondition">
+			<item><![CDATA[<=]]></item>
+
+			<item><![CDATA[>=]]></item>
+
+			<item><![CDATA[<]]></item>
+
+			<item><![CDATA[>]]></item>
+
+			<item><![CDATA[==]]></item>
+
+			<item><![CDATA[!=]]></item>
+
+		</value>
+		<value name="controlValue">
+			<item>freq</item>
+
+			<item>amp</item>
+
+		</value>
+		<value name="type">
+			<item>analog</item>
+
+			<item>digital</item>
+
+		</value>
+		<value name="controlType">
+			<item>slider</item>
+
+		</value>
+		<value name="target" nodes="id"/>
+	
+	</defaults>
+</xml>

@@ -1,0 +1,66 @@
+<xml>
+  <widgetType>WaveDisplay</widgetType>
+  <version>1.0</version>
+  <content>
+    <title>Try It Out</title>
+    <description>Use the sliders to adjust the frequency and amplitude of the radio wave</description>
+  </content>
+  <list>
+    <item>
+      <horizontalRange min="30" max="200" ticks="10" subTicks="10" measure="MHz" label="Wavelength" id="freq"/>
+      <verticalRange min="4" max="95" ticks="5" subTicks="10" measure="watts" label="Amplitude" id="amp"/>
+      <display showHorizontalLabel="false" showHorizontalTick="false" showVerticalLabel="false" showVerticalTick="false" centerVerticalZero="true"/>
+      <waves>
+        <wave>
+          <id>wave1</id>
+          <label>HF Wave</label>
+          <color>0xff0000</color>
+          <isAnimated>true</isAnimated>
+          <startAmp>30.0000</startAmp>
+          <startFreq>200</startFreq>
+          <type>analog</type>
+          <speed>3</speed>
+          <isAdjustable>false</isAdjustable>
+        </wave>
+      </waves>
+      <controls>
+        <control>
+          <controlType>slider</controlType>
+          <target>wave1</target>
+          <controlValue>freq</controlValue>
+        </control>
+        <control>
+          <controlType>slider</controlType>
+          <target>wave1</target>
+          <controlValue>amp</controlValue>
+        </control>
+      </controls>
+      <actions/>
+    </item>
+  </list>
+  <defaults>
+    <value name="typeOfActionUpdate">
+      <item>text</item>
+    </value>
+    <value name="typeOfCondition">
+      <item><![CDATA[<=]]></item>
+      <item><![CDATA[>=]]></item>
+      <item><![CDATA[<]]></item>
+      <item><![CDATA[>]]></item>
+      <item><![CDATA[==]]></item>
+      <item><![CDATA[!=]]></item>
+    </value>
+    <value name="controlValue">
+      <item>freq</item>
+      <item>amp</item>
+    </value>
+    <value name="type">
+      <item>analog</item>
+      <item>digital</item>
+    </value>
+    <value name="controlType">
+      <item>slider</item>
+    </value>
+    <value name="target" nodes="id"/>
+  </defaults>
+</xml>

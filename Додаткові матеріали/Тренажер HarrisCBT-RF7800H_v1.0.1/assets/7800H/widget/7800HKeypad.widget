@@ -1,0 +1,190 @@
+<xml>
+  <widgetType>RolloverImage</widgetType>
+  <version>1.0</version>
+  <list>
+    <item>
+      <imagePath>assets/7800H/content/7800H_keypad.png</imagePath>
+      <label>RF-7800H Input Keypad</label>
+      <highlightMode>enabled</highlightMode>
+      <hotspotHighlightColor>13311</hotspotHighlightColor>
+      <hotspotHighlightAlpha>.3</hotspotHighlightAlpha>
+      <popupHighlightColor>0xeeeeee</popupHighlightColor>
+      <hotspotMode>rollover</hotspotMode>
+      <popupMode>popupBox</popupMode>
+      <stringFormatting>[name]: [text]</stringFormatting>
+      <imageBoxType type="boxes"/>
+      <imageBoxes>
+        <imageBox>
+          <x>180</x>
+          <y>285</y>
+          <width>98</width>
+          <height>76</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[NEXT]</name>
+            <text>Switches the display to alternate screens.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>180</x>
+          <y>22</y>
+          <width>98</width>
+          <height>76</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[CALL]</name>
+            <text>Initiates hails, ALE and 3G/3G+ calls, and sends sync requests, depending on your mode.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>302</x>
+          <y>22</y>
+          <width>98</width>
+          <height>76</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[LT]</name>
+            <text>Provides access to the Keypad/Display backlight control menu.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>426</x>
+          <y>22</y>
+          <width>98</width>
+          <height>76</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[MODE]</name>
+            <text>Allows the operator to set the radio operating mode as FIX, ALE, HOP, 
+3G or 3G+</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>180</x>
+          <y>110</y>
+          <width>98</width>
+          <height>76</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[SQL]</name>
+            <text>Toggles programmed squelch on or off for the type of channel modulation currently used.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>180</x>
+          <y>200</y>
+          <width>98</width>
+          <height>76</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[OPT]</name>
+            <text>Provides access to the radio's option menus, which changes depending upon the mode</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>302</x>
+          <y>200</y>
+          <width>98</width>
+          <height>76</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[PGM]</name>
+            <text>Provides access to the radio's programming menus.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>57</x>
+          <y>200</y>
+          <width>98</width>
+          <height>76</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[CLR]</name>
+            <text>Used to cancel an operation, return to a previous screen, or clear a message on the front panel.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>547</x>
+          <y>200</y>
+          <width>98</width>
+          <height>76</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[ENT]</name>
+            <text>Used to accept a choice from a menu.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>547</x>
+          <y>22</y>
+          <width>98</width>
+          <height>161</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[PRE +/-]</name>
+            <text>Allows the operator to scroll through the presets.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>52</x>
+          <y>22</y>
+          <width>98</width>
+          <height>161</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[VOL +/-]</name>
+            <text>Up (+) increases volume, down (-) decreases volume. (Not lockable.)</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>302</x>
+          <y>285</y>
+          <width>218</width>
+          <height>76</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[Left Arrow] or [Right Arrow]</name>
+            <text>Allows the operator to move the cursor to the left or right, or to select a new menu field.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>425</x>
+          <y>112</y>
+          <width>98</width>
+          <height>161</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[Up Arrow] or [Down Arrow]</name>
+            <text>Allows the operator to step through a scroll field list.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>300</x>
+          <y>111</y>
+          <width>98</width>
+          <height>76</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[ZERO]</name>
+            <text>Zeroizes the radio.</text>
+          </contents>
+        </imageBox>
+      </imageBoxes>
+    </item>
+  </list>
+  <defaults>
+    <value name="type">
+      <item>boxes</item>
+      <item>circles</item>
+      <item>images</item>
+    </value>
+    <value name="highlightMode">
+      <item>enabled</item>
+      <item>disabled</item>
+    </value>
+    <value name="hotspotMode">
+      <item>rollover</item>
+      <item>click</item>
+    </value>
+  </defaults>
+</xml>

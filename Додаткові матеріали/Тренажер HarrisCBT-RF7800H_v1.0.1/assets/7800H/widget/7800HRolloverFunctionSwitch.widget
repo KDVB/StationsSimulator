@@ -1,0 +1,101 @@
+<xml>
+  <widgetType>RolloverImage</widgetType>
+  <version>1.0</version>
+  <list>
+    <item>
+      <imagePath>assets/7800H/content/radio/7800HfunctionKnob.jpg</imagePath>
+      <label>7800-H Controls</label>
+      <highlightMode>enabled</highlightMode>
+      <hotspotHighlightColor>13311</hotspotHighlightColor>
+      <hotspotHighlightAlpha>.3</hotspotHighlightAlpha>
+      <popupHighlightColor>15658734</popupHighlightColor>
+      <popupMode>popupBox</popupMode>
+      <hotspotMode>rollover</hotspotMode>
+      <stringFormatting>[name]: [text]</stringFormatting>
+      <imageBoxType type="boxes"/>
+      <imageBoxes>
+        <imageBox>
+          <x>9</x>
+          <y>122</y>
+          <width>73</width>
+          <height>53</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>OFF</name>
+            <text>A pull-to-turn action is required to enter or leave this position. Turns radio off.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>123</x>
+          <y>-1</y>
+          <width>57</width>
+          <height>48</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[CT]</name>
+            <text>Places the radio in the Cipher Text (CT) encryption mode.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>32</x>
+          <y>32</y>
+          <width>79</width>
+          <height>57</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[PT]</name>
+            <text>Places the radio in Plain Text (PT) non-encrypted mode.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>199</x>
+          <y>1</y>
+          <width>60</width>
+          <height>45</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[LD]</name>
+            <text>Load (LD) places the radio in loading and installation mode, which takes the radio offline.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>276</x>
+          <y>29</y>
+          <width>74</width>
+          <height>63</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[Z]</name>
+            <text>A pull-to-turn action is required. This zeroizes all programmed variables, including encryption variables.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>295</x>
+          <y>110</y>
+          <width>76</width>
+          <height>62</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>[CLR]</name>
+            <text>A pull-to-turn action is required. This setting zeroizes and provides improved HUB life while the radio is in storage.</text>
+          </contents>
+        </imageBox>
+      </imageBoxes>
+    </item>
+  </list>
+  <defaults>
+    <value name="type">
+      <item>boxes</item>
+      <item>circles</item>
+      <item>images</item>
+    </value>
+    <value name="highlightMode">
+      <item>enabled</item>
+      <item>disabled</item>
+    </value>
+    <value name="hotspotMode">
+      <item>rollover</item>
+      <item>click</item>
+    </value>
+  </defaults>
+</xml>

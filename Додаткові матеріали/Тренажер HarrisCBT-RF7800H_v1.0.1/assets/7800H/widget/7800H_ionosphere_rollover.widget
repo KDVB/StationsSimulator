@@ -1,0 +1,68 @@
+<xml>
+  <widgetType>RolloverImage</widgetType>
+  <version>1.0</version>
+  <list>
+    <item>
+      <imagePath>assets/7800H/content/LayerChart.png</imagePath>
+      <label>The Earth's Ionosphere</label>
+      <highlightMode>enabled</highlightMode>
+      <hotspotHighlightColor>52479</hotspotHighlightColor>
+      <hotspotHighlightAlpha>.25</hotspotHighlightAlpha>
+      <popupHighlightColor>13421772</popupHighlightColor>
+      <popupMode>popupBox</popupMode>
+      <hotspotMode>rollover</hotspotMode>
+      <stringFormatting>[name]: [text]</stringFormatting>
+      <imageBoxType type="boxes"/>
+      <imageBoxes>
+        <imageBox>
+          <x>180</x>
+          <y>0</y>
+          <width>270</width>
+          <height>177</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>F-Layer(s)</name>
+            <text>The F-layers are the most important layer of the ionosphere for long-haul communications. The properties of the F1 and F2 layers vary based on the time of day, and the F2 layer in particular, is the most useful.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>180</x>
+          <y>300</y>
+          <width>270</width>
+          <height>83</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>D-Layer</name>
+            <text>The D-Layer is the lowest region of the ionosphere that affects radio waves. It can completely absorb the energy of lower power transmissions when it is present during daylight hours.</text>
+          </contents>
+        </imageBox>
+        <imageBox>
+          <x>180</x>
+          <y>198</y>
+          <width>270</width>
+          <height>86</height>
+          <highlight>true</highlight>
+          <contents>
+            <name>E-Layer</name>
+            <text>Depending on environmental factors, the E-Layer can refract and boost signal energy.</text>
+          </contents>
+        </imageBox>
+      </imageBoxes>
+    </item>
+  </list>
+  <defaults>
+    <value name="type">
+      <item>boxes</item>
+      <item>circles</item>
+      <item>images</item>
+    </value>
+    <value name="highlightMode">
+      <item>enabled</item>
+      <item>disabled</item>
+    </value>
+    <value name="hotspotMode">
+      <item>rollover</item>
+      <item>click</item>
+    </value>
+  </defaults>
+</xml>

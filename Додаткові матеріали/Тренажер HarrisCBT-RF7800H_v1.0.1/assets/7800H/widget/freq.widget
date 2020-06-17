@@ -1,0 +1,134 @@
+<xml>
+  <widgetType>RangeDisplay</widgetType>
+  <version>1.0</version>
+  <content>
+    <title>Radio RF Frequency Ranges</title>
+    <description>View the ranges of different waveforms on the RF frequency spectrum.</description>
+  </content>
+  <list>
+    <item>
+      <label>VULOS LOS</label>
+      <range min="30" max="512" ticks="3" subTicks="10"/>
+      <display showLabels="true" showRangeLocator="false" showRangeText="true" rotation="horizontal" autoFit="false"/>
+      <ranges>
+        <range showRangeText="true">
+          <label>VHF Low Band</label>
+          <color>0xbb4e58</color>
+          <pattern>stripe_4.png</pattern>
+          <row>0</row>
+          <backgroundAlpha>1</backgroundAlpha>
+          <minValue>30.0000</minValue>
+          <maxValue>89.9999</maxValue>
+        </range>
+        <range showRangeText="true">
+          <label>VHF High Band</label>
+          <color>0xbb4e58</color>
+          <pattern>stripe.png</pattern>
+          <row>0</row>
+          <backgroundAlpha>1</backgroundAlpha>
+          <minValue>90.0000</minValue>
+          <maxValue>224.9999</maxValue>
+        </range>
+        <range showRangeText="true">
+          <label>UHF Band</label>
+          <color>0xbb4e58</color>
+          <pattern>stripe.png</pattern>
+          <row>0</row>
+          <backgroundAlpha>1</backgroundAlpha>
+          <minValue>225.0000</minValue>
+          <maxValue>511.9999</maxValue>
+        </range>
+      </ranges>
+    </item>
+    <item>
+      <label>VULOS SATCOM</label>
+      <range min="30" max="512" ticks="3" subTicks="10"/>
+      <display showLabels="true" showRangeLocator="true" showRangeText="true" rotation="horizontal" autoFit="false"/>
+      <ranges>
+        <range showRangeText="false">
+          <label>Rx</label>
+          <color>0xbb4e58</color>
+          <pattern>stripe.png</pattern>
+          <row>1</row>
+          <backgroundAlpha>1</backgroundAlpha>
+          <minValue>243.0000</minValue>
+          <maxValue>270.0000</maxValue>
+        </range>
+        <range showRangeText="false">
+          <label>Tx</label>
+          <color>0xbb4e58</color>
+          <pattern>stripe.png</pattern>
+          <row>1</row>
+          <backgroundAlpha>1</backgroundAlpha>
+          <minValue>291.000</minValue>
+          <maxValue>318.300</maxValue>
+        </range>
+        <range showRangeText="true">
+          <label>VHF Low</label>
+          <color>0xa8a8a9</color>
+          <pattern>stripe_2.png</pattern>
+          <row>0</row>
+          <backgroundAlpha>1</backgroundAlpha>
+          <minValue>30.000</minValue>
+          <maxValue>89.999</maxValue>
+        </range>
+        <range showRangeText="true">
+          <label>VHF High</label>
+          <color>0xa8a8a9</color>
+          <pattern>stripe.png</pattern>
+          <row>0</row>
+          <backgroundAlpha>1</backgroundAlpha>
+          <minValue>90.000</minValue>
+          <maxValue>224.999</maxValue>
+        </range>
+        <range showRangeText="true">
+          <label>UHF</label>
+          <color>0xa8a8a9</color>
+          <pattern>stripe.png</pattern>
+          <row>0</row>
+          <backgroundAlpha>1</backgroundAlpha>
+          <minValue>225.000</minValue>
+          <maxValue>511.999</maxValue>
+        </range>
+      </ranges>
+    </item>
+    <item>
+      <label>Antennas</label>
+      <range min="30" max="512" ticks="8" subTicks="10"/>
+      <display showLabels="true" showRangeLocator="false" showRangeText="false" rotation="horizontal" autoFit="false"/>
+      <ranges>
+        <range showRangeText="true">
+          <label>Whip</label>
+          <color>0x546984</color>
+          <pattern>stripe.png</pattern>
+          <row>0</row>
+          <backgroundAlpha>1</backgroundAlpha>
+          <minValue>30.0000</minValue>
+          <maxValue>90.0000</maxValue>
+        </range>
+        <range showRangeText="true">
+          <label>Baton</label>
+          <color>0x5a5984</color>
+          <pattern>stripe.png</pattern>
+          <row>0</row>
+          <backgroundAlpha>1</backgroundAlpha>
+          <minValue>90.0000</minValue>
+          <maxValue>512.0000</maxValue>
+        </range>
+      </ranges>
+    </item>
+  </list>
+  <defaults>
+    <value name="pattern">
+      <item>stripe.png</item>
+      <item>stripe_2.png</item>
+      <item>stripe_3.png</item>
+      <item>stripe_4.png</item>
+      <item>stripe_5.png</item>
+    </value>
+    <value name="rotation">
+      <item>horizontal</item>
+      <item>vertical</item>
+    </value>
+  </defaults>
+</xml>
